@@ -74,37 +74,41 @@ var randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"]
 // Expected output: ["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"]
 var randomNouns2 = ["temperature", "database", "chopsticks", "mango", "deduction"]
 // Expected output: ["Temperature", "Database", "Chopsticks", "Mango", "Deduction"]
+var randomMess = ["hEadACHes", "VEGANISM", "allergies", "DEVELOPERS", "oranGutan"]
 
 // My test starts with describing how this function will be a 'proper noun maker' It should be able to return each string in an array with a capitalized first letter and can expect as much.
 
-describe("Proper noun maker", () =>{
-    test("returns an array with the first index of every string inside capitalized", () =>{
-        expect(properNouns()).toEqual(["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"])
-        expect(properNouns()).toEqual(["Temperature", "Database", "Chopsticks", "Mango", "Deduction"])
+describe("Capitalize first letter of strings", () =>{
+    test("returns an array with the first letter of every string inside capitalized", () =>{
+        expect(properNouns.capitalizeNouns(randomNouns1)).toEqual(["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"])
+        expect(properNouns.capitalizeNouns(randomNouns2)).toEqual(["Temperature", "Database", "Chopsticks", "Mango", "Deduction"])
     })
 }) 
 
 
 
 // b) Create the function that makes the test pass.
+// I GOT IT TO PASS FINALLY!
+// I refactored my code by completely scrapping what I had before and building a class instead. To me the class looks cleaner aaaand it's helping me understand how to utilize them better :D
 
 // ---Psuedo code---
-// Declare a function names properNouns
-// declare a variable for the capitalized strings
-// Function should take in an array
-// using for loops iterate through the array
+// Declare a class named CapEm (Capitalize them, but in lazy dev lang)
+// declare a method named capitalizeNouns
+// Method should take in an array of string and return an array of strings with the first index of every string capitalized
+// Declare a variable name properNouns to equal the class CapEm for easy referencing 
 
-
-const properNouns = (array) => {
-    let newNouns = []
-    for (i = 0; i< array.length; i++){
-        if(typeof array[i] === "string"){
-           newNouns = array[i].charAt(0).toUpperCase
-        }
+class CapEm {
+    constructor(nouns1){
+        this.nouns1 = nouns1
     }
-    return newNouns
+    capitalizeNouns(array){
+        return array.map(value => value[0].toUpperCase() + value.slice(1).toLowerCase())
+    }
 }
-console.log(properNouns(randomNouns1));
+
+var properNouns = new CapEm
+console.log(properNouns.capitalizeNouns(randomNouns1));
+console.log(properNouns.capitalizeNouns(randomMess));
 
 // --------------------3) Create a function that takes in a string and logs the index of the first vowel.
 
