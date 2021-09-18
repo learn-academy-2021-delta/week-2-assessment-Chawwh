@@ -15,7 +15,7 @@
 // --------------------1) Create a function that takes a number as an argument and decides if the number is evenly divisible by three or not.
 
 // a) Create a test with expect statements for each of the variables provided.
-// Test created! Hope you like it! 
+// Test created! Hope you like it!
 // My test starts with describing it as 'a number sorter for multiples of 3' because we want to know if numbers are evenly divisible by 3 or not, which is what my test parameters are! Finally, I want this test to expect my multOf3Checker to return true is my number is indeed divisible by 3 or false if not.
 
 // Running first test. Fingers crossed for red!
@@ -30,19 +30,28 @@ var num2 = 0
 var num3 = -7
 // Expected output: "-7 is not divisible by three"
 
-describe("a number checker for multiples of three", (number) => {
-    test ('should take in a number and decide if it is evenly divisble by three or not', {
-        expect(multOf3Checker(num1).toEqual(number % 3 === 0))
-        expect(multOf3Checker(num2).toEqual(number % 3 === 0))
-        expect(multOf3Checker(num3).toEqual(number % 3 !== 0))
+
+
+describe("a number checker for multiples of three", () => {
+    test ('should take in a number and decide if it is evenly divisble by three or not' ,() => {
+        expect(multOf3Checker(num1)).toEqual("15 is divisible by three")
+        expect(multOf3Checker(num2)).toEqual("0 is divisible by three")
+        expect(multOf3Checker(num3)).toEqual("-7 is not divisible by three")
     })
-})
+  })
+
+
 
 // b) Create the function that makes the test pass.
+// YAYAYAYAYY!!! Holy cow I really just spent an hour trying to get the first green pass
+// -- I was running into issues where when I tried to add an expect for every variable it would fail and return an error about .toEqual not liking a string so I took num2 and num3 out.
+// YAY I GOT IT TO PASS AGAIN WITH ALL 3 EXPECT STATEMENTS!!! I'm gonna be honest, I don't see what changed from what I had before that was failing to what I have now but hey, it works! Thats what I'd like to call ~Successfully Refactored~
 
+
+// ---Pseudo code---
 // declare a function named multOf3Checker
 // function should take in a number
-// conditional if the number is divisible by 3 
+// conditional if the number is divisible by 3
 // return "number is divisible by 3"
 // else return "number is not divisible by 3"
 
@@ -58,17 +67,44 @@ console.log(multOf3Checker(num1));
 // --------------------2) Create a function that takes in an array of words and returns an array with all the words capitalized.
 
 // a) Create a test with expect statements for each of the variables provided.
+// My brain hurts. Test created.
+// What's black white and red all over? A skunk digging through a makeup factory's reject bin! Test failed!!
 
 var randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"]
 // Expected output: ["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"]
 var randomNouns2 = ["temperature", "database", "chopsticks", "mango", "deduction"]
 // Expected output: ["Temperature", "Database", "Chopsticks", "Mango", "Deduction"]
 
+// My test starts with describing how this function will be a 'proper noun maker' It should be able to return each string in an array with a capitalized first letter and can expect as much.
+
+describe("Proper noun maker", () =>{
+    test("returns an array with the first index of every string inside capitalized", () =>{
+        expect(properNouns()).toEqual(["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"])
+        expect(properNouns()).toEqual(["Temperature", "Database", "Chopsticks", "Mango", "Deduction"])
+    })
+}) 
+
 
 
 // b) Create the function that makes the test pass.
 
+// ---Psuedo code---
+// Declare a function names properNouns
+// declare a variable for the capitalized strings
+// Function should take in an array
+// using for loops iterate through the array
 
+
+const properNouns = (array) => {
+    let newNouns = []
+    for (i = 0; i< array.length; i++){
+        if(typeof array[i] === "string"){
+           newNouns = array[i].charAt(0).toUpperCase
+        }
+    }
+    return newNouns
+}
+console.log(properNouns(randomNouns1));
 
 // --------------------3) Create a function that takes in a string and logs the index of the first vowel.
 
