@@ -8,9 +8,9 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 1. What is iteration?
 
-  Your answer: Iteration is moving through each index in an array or repeating an action until a condition is met! An example I can give you is for loops! for loops will continue 'iterating' until it acomplishes its goal and is met with a false statement. 
+  Your answer: Iteration is moving through each index in an array or repeating an action until a condition is met! An example I can give you is for loops! for loops will continue running until it acomplishes its goal and is met with a false statement. 
 
-  Researched answer:
+  Researched answer: Iteration is a fancy tool for repeating tasks. It sure comes in handy when wanting to move through every index of an array!
 
 
 
@@ -18,15 +18,16 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
   Your answer: The parameters for .map() are value, index, and array in that order! value is the sole required parameter for this function while the other 2 are optional. Typically when you use .map() you're wanting it to return a value, most likely manipulated in some way! ^-^
 
-  Researched answer:
+  Researched answer:  .map() takes in the parameters value, index, and array. Value is required. index and array are optional. This function creates a new array from the result of the array it was called on.
+  <!-- I'm stuck on how to word the researched answer because mine was already pretty dang close -->
 
 
 
 3. What is object destructuring?
 
-  Your answer: Object destructuring is taking an object... and destructuring it... I'M KIDDING! ...Sort of. Object destructuring is creating a variable as a pathway to a key or keys within an object! I like to think of it as a simple shortcut  to the keys I want to reference.
+  Your answer: Object destructuring is taking an object... and destructuring it... I'M KIDDING! ...Sort of. Object destructuring the difference between waiting in line for 40 minutes at a waterpark or spending a little extra for line-skipping and tube valet. They both take you to the same place, but one is much faster!
 
-  Researched answer:
+  Researched answer: Object destructuring is creating a variable as a pathway to a key or keys within an object! It's just a shortcut really! 
 
 
 
@@ -34,7 +35,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
   Your answer: From my understanding methods are functions that live within an object! methods are also capable of taking other functions as arguments
 
-  Researched answer:
+  Researched answer: Methods operate on data located inside of a class. Methods also cannot be executed without first calling its class while functions are perfectly fine to invoke when executred.
 
 
 
@@ -42,7 +43,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
   Your answer: I actually found the differences between classes and objects super interesting! So classes are used as sort of a template for creating objects. It's super cool!! I would assume if you wanted to create like a playable character a user can customize for a game you would use constructor() to set dynamic keys that take input like 'name', 'height', 'hair_color', 'hair_length' etc. and then create functions to take that input and use it to build the character! 
 
-  Researched answer:
+  Researched answer:  Classes are templates for objects. Classes cannot be manipulated while objects can. Aaaaand classes are named using PascalCase while objects use camelCase!
 
 
 
@@ -50,7 +51,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
   Your answer: Hoisting is something javascript does where it recognizes a function by storing it in what I'm guessing is RAM and calling on it technically before it's declared. It doesn't make a whole lot of sense to me just yet since we know javascript reads code from top down.
 
-  Researched answer:
+  Researched answer: Hoisting is when javascript 'saves' variables and functions so they can be executed before the appear in the code. 
 
 
 
@@ -58,12 +59,14 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 Research and define the following terms to the best of your ability.
 
-1. Class Inheritance:
+1. Class Inheritance: class inheritance is a way for one class to expand upon another. Like a .push() but for classes
 
-2. React:
+2. React: React is a front-end javascript library and is used for building user interfaces! (omg do we get to build legit apps?!)
+<!-- Ew this is owned by facebook too -->
+<!-- I'M KIDDING I'M KIDDING pls hire me fb -->
 
-3. React state:
+3. React state:  React state is an object that holds some dynamic data
 
-4. React lifecycle methods:
+4. React lifecycle methods: constructor(), getDerivedStateFromProps(), render(), and componentDidMount() are built in methods used to monitor the lifecycle of components
 
-5. DOM:
+5. DOM: 'Document object model' A representation of HTML elements in a webpage using a flow chart

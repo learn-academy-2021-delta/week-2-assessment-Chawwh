@@ -41,7 +41,7 @@ var oddsOnly = [11, 12, 13, 14, 15].filter(value => value % 2 === 0)
 // console.log(oddsOnly)
 
 // a) Your answer: [12, 14] I feel like this is another tricky one but I am so bad at everything math that I purposefully studied modulo extra hard so I wouldn't look like an smooth-brained clown when pair programming
-// b) Verify and explain: WOOT WOOT!! So what .filter is doing currently is taking every value in the array and dividing it by 2. If it equals 0 and is perfectly divisible, straight clean cut, it's being pushed into oddsOnly!(more like evensOnly HAH) 
+// b) Verify and explain: HAH GOTEEM! So what .filter is doing currently is taking every value in the array and dividing it by 2. If it equals 0 and is perfectly divisible, straight clean cut, it's being pushed into oddsOnly!(more like evensOnly HAH) 
 
 
 // --------------------5) What will this log?
